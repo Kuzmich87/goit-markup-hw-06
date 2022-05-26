@@ -414,6 +414,22 @@
             </li>
           </ul>
         </div>
+        <div class="footer form">
+          <h2 class="title form">Подпишитесь на рассылку</h2>
+          <form class="footer-form">
+            <label>
+              <input class="footer-input" type="email" name="email" placeholder="E-mail" />
+            </label>
+            <button class="footer-submit" type="submit">
+              <span class="footer-button"
+                >Подписаться
+                <svg width="24" height="24" class="icon-footer-form">
+                  <use href="./images/webstudio/symbol-defs.svg#icon-icon-send"></use>
+                </svg>
+              </span>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -424,6 +440,43 @@
             <use href="./images/webstudio/symbol-defs.svg#icon-close-black"></use>
           </svg>
         </button>
+
+        <strong class="text-modal">Оставьте свои данные, мы вам перезвоним</strong>
+        <form class="user-form">
+          <label class="user-info" for="name">
+            <span class="user-text">Имя</span>
+            <input class="form-input" type="text" name="name" id="name" />
+            <svg class="form-icon" width="12" height="12">
+              <use href="./images/webstudio/symbol-defs.svg#icon-client"></use>
+            </svg>
+          </label>
+
+          <label class="user-info" for="tel">
+            <span class="user-text">Телефон</span>
+            <input class="form-input" type="tel" name="tel" id="tel" />
+            <svg class="form-icon" width="13" height="13">
+              <use href="./images/webstudio/symbol-defs.svg#icon-tel"></use>
+            </svg>
+          </label>
+
+          <label class="user-info" for="email">
+            <span class="user-text">Почта</span>
+            <input class="form-input" type="email" name="email" id="email" />
+            <svg class="form-icon" width="15" height="12">
+              <use href="./images/webstudio/symbol-defs.svg#icon-email"></use>
+            </svg>
+          </label>
+
+          <label>
+            <span class="user-text">Комментарий</span>
+            <textarea class="textarea" name="coments" placeholder="Введите текст"></textarea>
+          </label>
+
+          <input type="checkbox" name="" value="agree" id="agree" />
+          <label for="agree"> Соглашаюсь с рассылкой и принимаю условия</label>
+
+          <button class="button-submit" type="submit">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./modal.js"></script>
