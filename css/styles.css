@@ -997,6 +997,7 @@ ul {
 .form-policity-group {
   display: flex;
   align-items: center;
+  padding-left: 12px;
 }
 
 .visually-hidden {
@@ -1039,6 +1040,10 @@ ul {
 }
 .checkbox:checked + .custom-checkbox .custom-checkbox-icon {
   opacity: 1;
+}
+
+.form-policity-terms {
+  color: var(--accent-color);
 }
 .button-submit {
   min-width: 200px;
