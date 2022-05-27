@@ -881,6 +881,7 @@ ul {
 
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
 
   /*анимация кнопки*/
   transition: background-color 250ms var(--timing-function), fill 250ms var(--timing-function);
@@ -912,11 +913,22 @@ ul {
   display: block;
   position: relative;
   text-align: left;
+  transition: fill 250ms var(--timing-function);
 }
+
+.user-info:hover,
+.user-info:focus {
+  fill: var(--accent-color);
+}
+
 .user-text {
   display: block;
   padding-bottom: 4px;
   text-align: left;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
 }
 
 .form-input {
@@ -929,6 +941,7 @@ ul {
   padding-bottom: 12px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 
   margin-bottom: 10px;
   transition: border-color 250ms var(--timing-function);
@@ -940,7 +953,7 @@ ul {
 }
 .form-icon {
   position: absolute;
-  top: 42px;
+  top: 32px;
   left: 15px;
 }
 
@@ -949,11 +962,87 @@ ul {
   width: 100%;
   min-height: 120px;
   margin-bottom: 20px;
+
+  padding-left: 16px;
+  padding-top: 12px;
+
   resize: none;
+  outline: none;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+
+  transition: border-color 250ms var(--timing-function);
+}
+.textarea:hover,
+.textarea:focus {
+  border-color: var(--accent-color);
+}
+.textarea::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
 
+.textarea:focus,
+.textarea:hover {
+  border-color: var(--accent-color);
+}
+
+.form-policity-group {
+  display: flex;
+  align-items: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.custom-checkbox {
+  width: 16px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 7px;
+
+  outline: 2px solid var(--title-text-color);
+  outline-offset: -2px;
+  border-radius: 2px;
+
+  background-color: transparent;
+  transition: background-color 250ms var(--timing-function);
+}
+
+.checkbox:checked + .custom-checkbox {
+  background-color: var(--accent-color);
+  outline: transparent;
+}
+.custom-checkbox-icon {
+  opacity: 0;
+  fill: var(--white-color);
+
+  transition: opacity 250ms var(--timing-function);
+}
+.checkbox:checked + .custom-checkbox .custom-checkbox-icon {
+  opacity: 1;
+}
 .button-submit {
   min-width: 200px;
+  margin-top: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
 

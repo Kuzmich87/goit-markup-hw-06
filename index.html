@@ -472,9 +472,24 @@
             <textarea class="textarea" name="coments" placeholder="Введите текст"></textarea>
           </label>
 
-          <input type="checkbox" name="" value="agree" id="agree" />
-          <label for="agree"> Соглашаюсь с рассылкой и принимаю условия</label>
-
+          <label class="form-policity-group" for="agree">
+            <input
+              class="checkbox visually-hidden"
+              type="checkbox"
+              name=""
+              value="agree"
+              id="agree"
+            />
+            <span class="custom-checkbox">
+              <svg class="custom-checkbox-icon" width="16" height="15">
+                <use href="./images/webstudio/symbol-defs.svg#icon-agree"></use>
+              </svg>
+            </span>
+            <span class="form-policity-text"
+              >Соглашаюсь с рассылкой и принимаю
+              <a href="">Условия договора</a>
+            </span>
+          </label>
           <button class="button-submit" type="submit">Отправить</button>
         </form>
       </div>
